@@ -1,0 +1,13 @@
+CMakeUserPresets.json
+# If you put build tree in the source tree add it like so:
+build_debug/
+build_release/
+
+# Generated and user files
+**/CMakeCache.txt
+**/CMakeUserPresets.json
+**/CTestTestfile.cmake
+**/CPackConfig.cmake
+**/cmake_install.cmake
+**/install_manifest.txt
+**/compile_commands.json

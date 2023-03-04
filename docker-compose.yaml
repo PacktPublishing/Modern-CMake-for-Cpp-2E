@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  cmake:
+    build:
+      context: .
+      dockerfile: Dockerfile.examples
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    volumes:
+      - ./home/:/root:ro
+      - ./examples/:/root/examples:ro
+      - ./mounted/:/tmp/b
