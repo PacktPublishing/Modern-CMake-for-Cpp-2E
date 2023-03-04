@@ -1,8 +1,8 @@
-# Modern CMake for C++
+# Modern CMake for C++ 2nd Edition
 
 <a href="https://www.packtpub.com/product/modern-cmake-for-c/9781801070058"><img src="https://static.packt-cdn.com/products/9781801070058/cover/smaller" height="256px" align="right"></a>
 
-This is the code repository for [Modern CMake for C++](https://www.packtpub.com/product/modern-cmake-for-c/9781801070058), published by Packt.
+This is the code repository for [Modern CMake for C++ 2nd Edition](<ADD URL>), published by Packt.
 
 **Discover a better approach to building, testing, and packaging your software**
 
@@ -17,7 +17,7 @@ This book covers the following exciting features:
 * Build solutions that can be reused and maintained in the long term
 * Understand how to optimize build artifacts and the build process itself
 
-If you feel this book is for you, get your [copy](https://www.amazon.com/Modern-CMake-Discover-approach-packaging/dp/1801070059) today!
+If you feel this book is for you, get your [copy](<ADD URL>) today!
 
 
 ## Instructions and Navigations
@@ -41,7 +41,7 @@ With the following software and hardware list you can run all code files present
 ### Software and Hardware List
 | Chapter | Software/Hardware required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
-| 1-13 | Cmake 3.20 | Windows, Mac OS X, and Linux |
+| 1-13 | CMake 3.26 | Windows, Mac OS X, and Linux |
 
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781801070058_ColorImages.pdf).
@@ -56,5 +56,5 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 ## Get to Know the Author
 
 **Rafał Świdziński** 
-works as a staff engineer at Google. With over 10 years of professional experience as a full stack developer, he has been able to experiment with a vast multitude of programming languages and technologies. During this time, he has been building software under his own company and for corporations including Cisco Meraki, Amazon, and Ericsson.
+works as a staff engineer at Google. With over 12 years of professional experience as a full stack developer, he has been able to experiment with a vast multitude of programming languages and technologies. During this time, he has been building software under his own company and for corporations including Cisco Meraki, Amazon, and Ericsson.
 Originally from Łódź, Poland, he now lives in London, UK, from where he runs a YouTube channel, “Smok,” discussing topics of software development. He tackles technical problems, including real-life and work-related challenges encountered by many people in the field. Throughout his work, he explains the technical concepts in detail and demystifies the art of being a software engineer. His primary focus is on high-quality code and the craftsmanship of programming.
