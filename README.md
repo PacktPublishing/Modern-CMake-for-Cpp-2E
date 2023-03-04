@@ -21,7 +21,7 @@ If you feel this book is for you, get your [copy](<ADD URL>) today!
 
 
 ## Instructions and Navigations
-All of the code is organized into folders. For example, Chapter02.
+All of the code is organized into folders. For example, examples/ch02.
 
 The code will look like the following:
 ```

@@ -1,10 +1,10 @@
 PS1="\w\$ "
 
 e() {
-  cd "/root/examples/chapter"*"$1/"*"$2"*
+  cd "/root/examples/ch"*"$1/"*"$2"*
 }
 ap() {
-  cd "/root/examples/appendix"*"$1/"*"$2"*
+  cd "/root/examples/ap"*"$1/"*"$2"*
 }
 gb() {
   cd /tmp/b
