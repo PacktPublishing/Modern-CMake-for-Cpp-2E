@@ -7,6 +7,6 @@ services:
     stdin_open: true # docker run -i
     tty: true # docker run -t
     volumes:
-      - ./home/:/root:ro
       - ./examples/:/root/examples:ro
+      - ./home/:/root:ro
       - ./mounted/:/tmp/b

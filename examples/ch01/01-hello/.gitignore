@@ -1,5 +1,5 @@
 CMakeUserPresets.json
-# If you put build tree in the source tree add it like so:
+# If in-source builds are used, exclude their output like so:
 build_debug/
 build_release/
 
