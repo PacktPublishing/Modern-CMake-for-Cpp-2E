@@ -3,6 +3,5 @@ project(Rental CXX)
 include(cars/cars.cmake)
 add_executable(Rental
                main.cpp
-               ${cars_sources}
-               # ${more variables}
+               ${sources} # for cars/
 )

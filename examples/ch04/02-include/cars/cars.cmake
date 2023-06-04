@@ -1,4 +1,4 @@
-set(cars_sources
+set(sources
     cars/car.cpp
-#   cars/car_maintenance.cpp
+#   more files in other directories
 )

@@ -1,5 +1,5 @@
 add_library(cars OBJECT
     car.cpp
-#   car_maintenance.cpp
+#   more files in other directories
 )
 target_include_directories(cars PUBLIC .)
