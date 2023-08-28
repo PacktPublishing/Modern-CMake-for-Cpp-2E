@@ -8,7 +8,7 @@ protobuf-compiler libprotobuf-dev libpqxx-dev\
 && rm -rf /var/lib/apt/lists/*
 
 # install cmake
-ENV version=3.26.0-rc2
+ENV version=3.26.0
 
 RUN cd /tmp && \
 mkdir /opt/cmake && \
