@@ -1,4 +1,5 @@
-function(add_imported_library library headers)
+# Defining IMPORTED targets
+function(define_imported_target library headers)
   add_library(PQXX::PQXX UNKNOWN IMPORTED)
   set_target_properties(PQXX::PQXX PROPERTIES
     IMPORTED_LOCATION ${library}
@@ -13,15 +14,25 @@ function(add_imported_library library headers)
   mark_as_advanced(FORCE PQXX_INCLUDES)
 endfunction()
 
+# Accepting user-provided paths and reusing cached values
 if (PQXX_LIBRARIES AND PQXX_INCLUDES)
-  add_imported_library(${PQXX_LIBRARIES} ${PQXX_INCLUDES})
+  define_imported_target(${PQXX_LIBRARIES} ${PQXX_INCLUDES})
   return()
 endif()
 
-# deliberately used in FindModule against the documentation
-include(CMakeFindDependencyMacro)
-find_dependency(PostgreSQL)
+# Searching for nested dependencies
+set(QUIET_ARG)
+if(PQXX_FIND_QUIETLY)
+  set(QUIET_ARG QUIET)
+endif()
 
+set(REQUIRED_ARG)
+if(PQXX_FIND_REQUIRED)
+  set(REQUIRED_ARG REQUIRED)
+endif()
+find_package(PostgreSQL ${QUIET_ARG} ${REQUIRED_ARG})
+
+# Searching for library files
 file(TO_CMAKE_PATH "$ENV{PQXX_DIR}" _PQXX_DIR)
 find_library(PQXX_LIBRARY_PATH NAMES libpqxx pqxx
   PATHS
@@ -40,6 +51,7 @@ find_library(PQXX_LIBRARY_PATH NAMES libpqxx pqxx
   NO_DEFAULT_PATH
 )
 
+# Searching for header files
 find_path(PQXX_HEADER_PATH NAMES pqxx/pqxx
   PATHS
     ${_PQXX_DIR}/include
@@ -51,12 +63,14 @@ find_path(PQXX_HEADER_PATH NAMES pqxx/pqxx
   NO_DEFAULT_PATH
 )
 
+# Returning the final results
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(
   PQXX DEFAULT_MSG PQXX_LIBRARY_PATH PQXX_HEADER_PATH
 )
+
 if (PQXX_FOUND)
-  add_imported_library(
+  define_imported_target(
     "${PQXX_LIBRARY_PATH};${POSTGRES_LIBRARIES}"
     "${PQXX_HEADER_PATH};${POSTGRES_INCLUDE_DIRECTORIES}"
   )
