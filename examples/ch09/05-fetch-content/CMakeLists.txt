@@ -7,7 +7,7 @@ configure_file(config.yaml config.yaml COPYONLY)
 include(FetchContent)
 FetchContent_Declare(external-yaml-cpp
   GIT_REPOSITORY    https://github.com/jbeder/yaml-cpp.git
-  GIT_TAG           yaml-cpp-0.6.3
+  GIT_TAG           0.8.0
 )
 FetchContent_MakeAvailable(external-yaml-cpp)
 target_link_libraries(welcome PRIVATE yaml-cpp)
