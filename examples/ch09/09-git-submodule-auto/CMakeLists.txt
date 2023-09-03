@@ -6,7 +6,7 @@ configure_file(config.yaml config.yaml COPYONLY)
 
 find_package(yaml-cpp QUIET)
 
-if (NOT TARGET yaml-cpp)
+if (NOT TARGET yaml-cpp::yaml-cpp)
   message("yaml-cpp not found, initializing submodule")
   execute_process(
     COMMAND git submodule update --init -- external/yaml-cpp
