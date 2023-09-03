@@ -10,8 +10,8 @@ FetchContent_Declare(external-yaml-cpp
   GIT_TAG           0.8.0
 )
 FetchContent_MakeAvailable(external-yaml-cpp)
-target_link_libraries(welcome PRIVATE yaml-cpp)
+target_link_libraries(welcome PRIVATE yaml-cpp::yaml-cpp)
 
 include(CMakePrintHelpers)
-cmake_print_properties(TARGETS yaml-cpp
+cmake_print_properties(TARGETS yaml-cpp::yaml-cpp
                        PROPERTIES TYPE SOURCE_DIR)

@@ -5,4 +5,4 @@ add_executable(welcome main.cpp)
 configure_file(config.yaml config.yaml COPYONLY)
 
 add_subdirectory(extern/yaml-cpp)
-target_link_libraries(welcome PRIVATE yaml-cpp)
+target_link_libraries(welcome PRIVATE yaml-cpp::yaml-cpp)

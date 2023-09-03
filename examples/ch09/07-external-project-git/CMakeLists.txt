@@ -9,9 +9,9 @@ ExternalProject_Add(external-yaml-cpp
   GIT_REPOSITORY    https://github.com/jbeder/yaml-cpp.git
   GIT_TAG           yaml-cpp-0.6.3
 )
-target_link_libraries(welcome PRIVATE yaml-cpp)
+target_link_libraries(welcome PRIVATE yaml-cpp::yaml-cpp)
 
 
 include(CMakePrintHelpers)
-cmake_print_properties(TARGETS yaml-cpp
+cmake_print_properties(TARGETS yaml-cpp::yaml-cpp
                        PROPERTIES TYPE SOURCE_DIR)
