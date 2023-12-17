@@ -3,10 +3,7 @@ project(InstallCode CXX)
 add_subdirectory(src bin)
 
 include(GNUInstallDirs)
-install(TARGETS calc LIBRARY
-        PUBLIC_HEADER
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/calc
-       )
+install(TARGETS calc LIBRARY FILE_SET HEADERS)
 
 if (UNIX)
   install(CODE "execute_process(COMMAND ldconfig)")
