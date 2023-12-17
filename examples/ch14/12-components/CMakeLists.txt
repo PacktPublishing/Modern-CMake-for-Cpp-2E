@@ -6,8 +6,7 @@ add_subdirectory(src bin)
 install(TARGETS calc EXPORT CalcTargets
   ARCHIVE
     COMPONENT lib
-  PUBLIC_HEADER
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/calc
+  FILE_SET HEADERS
     COMPONENT headers
 )
 
