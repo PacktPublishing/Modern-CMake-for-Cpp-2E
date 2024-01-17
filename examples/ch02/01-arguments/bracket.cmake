@@ -7,6 +7,7 @@ argument
 
 message([==[
   because we used two equal-signs "=="
-  following is still a single argument:
+  this command receives only a single argument
+  even if it includes two square brackets in a row
   { "petsArray" = [["mouse","cat"],["dog"]] }
 ]==])
