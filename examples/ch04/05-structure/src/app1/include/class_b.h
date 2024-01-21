@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-class Lib2 {
+class ClassB {
   public:
     std::string method();
 };
