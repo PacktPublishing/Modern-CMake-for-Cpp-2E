@@ -15,6 +15,7 @@ RUN cd /tmp && \
     chmod a+x ./cmake-$version-Linux-x86_64.sh && \
     ./cmake-$version-Linux-x86_64.sh --prefix=/opt/cmake --skip-license && \
     rm cmake-$version-Linux-x86_64.sh
+ENV PATH="/opt/cmake/bin:${PATH}"
 
 RUN cd /tmp && \
     git clone https://github.com/ninja-build/ninja.git && \
