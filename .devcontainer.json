@@ -1,0 +1,9 @@
+{
+  "name": "Modern CMake for C++ Development Container",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": ["ms-vscode.cpptools", "ms-vscode.cmake-tools"],
+  "remoteUser": "devuser"
+}

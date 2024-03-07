@@ -29,3 +29,13 @@ RUN cd /tmp && \
 FROM build-env as examples
 COPY . /root
 WORKDIR /root/examples
+
+# Dev container stage
+FROM examples as devcontainer
+RUN apt-get update && apt-get install -y openssh-server sudo && rm -rf /var/lib/apt/lists/*
+RUN useradd -m devuser && echo 'devuser:devuser' | chpasswd && adduser devuser sudo
+RUN mkdir /var/run/sshd
+RUN echo 'PermitRootLogin no' >> /etc/ssh/sshd_config && echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
+RUN echo 'PermitUserEnvironment yes' >> /etc/ssh/sshd_config
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
