@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t swidzinski/cmake2:base -f Dockerfile .
+docker build --target build-env -t swidzinski/cmake2:base .

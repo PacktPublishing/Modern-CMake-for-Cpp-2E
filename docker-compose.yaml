@@ -3,10 +3,11 @@ services:
   cmake:
     build:
       context: .
-      dockerfile: Dockerfile.examples
+      dockerfile: Dockerfile
     stdin_open: true # docker run -i
     tty: true # docker run -t
     volumes:
       - ./examples/:/root/examples:ro
+      - ./.git/:/root/.git:ro
       - ./home/:/root:ro
       - ./mounted/:/tmp/b

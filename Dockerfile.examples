@@ -1,4 +1,0 @@
-FROM swidzinski/cmake2:base
-
-ADD ./ /root
-WORKDIR /root/examples
