@@ -4,8 +4,7 @@ install(TARGETS calc_obj calc_shared calc_static
   EXPORT CalcLibrary
   ARCHIVE COMPONENT development
   LIBRARY COMPONENT runtime
-  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/calc
-    COMPONENT runtime
+  FILE_SET HEADERS COMPONENT runtime
 )
 
 if (UNIX)

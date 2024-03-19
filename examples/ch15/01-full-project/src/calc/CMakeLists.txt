@@ -4,8 +4,11 @@ target_include_directories(calc_obj INTERFACE
   "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
 )
 set_target_properties(calc_obj PROPERTIES
-    PUBLIC_HEADER src/calc/include/calc/calc.h
     POSITION_INDEPENDENT_CODE 1
+)
+target_sources(calc_obj PUBLIC FILE_SET HEADERS
+                           BASE_DIRS include
+                           FILES include/calc/calc.h
 )
 
 add_library(calc_shared SHARED)
