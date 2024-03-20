@@ -23,6 +23,6 @@ set(CMAKE_CXX_STANDARD 20)
 add_library(math)
 add_executable(main main.cpp)
 target_sources(math
-  PUBLIC FILE_SET CXX_MODULES FILES math.cpp
+  PUBLIC FILE_SET CXX_MODULES FILES math.cppm
 )
 target_link_libraries(main PRIVATE math)
