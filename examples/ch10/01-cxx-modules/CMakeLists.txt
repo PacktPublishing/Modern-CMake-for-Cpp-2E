@@ -3,9 +3,8 @@ project(CXXModules CXX)
 
 # turn on the experimental API
 if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.28.0)
-  # We don't know yet if 3.28 wil require API gate flag,
-  # or what will be its value
-  message(FATAL_ERROR "Version higher than 3.27 not supported")
+  # Assume that C++ sources do import modules
+  cmake_policy(SET CMP0155 NEW)
 elseif(CMAKE_VERSION VERSION_GREATER_EQUAL 3.27.0)
   set(CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API
       "aa1f7df0-828a-4fcd-9afc-2dc80491aca7")

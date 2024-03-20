@@ -1,14 +1,20 @@
 # Build Environment Stage
-FROM ubuntu:latest as build-env
-RUN apt-get update && apt-get install --no-install-recommends -y \
-    ca-certificates vim tree wget git lcov gawk \
+FROM ubuntu:jammy as build-env
+
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y wget ca-certificates gnupg2 software-properties-common && \
+    wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | gpg --dearmor -o /usr/share/keyrings/llvm-archive-keyring.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/llvm-archive-keyring.gpg] http://apt.llvm.org/jammy/ llvm-toolchain-jammy-18 main" | tee /etc/apt/sources.list.d/llvm.list && \
+    apt-get update && \
+    apt-get install --no-install-recommends -y \
+    vim zsh tree git lcov gawk \
     g++ make \
     pkg-config valgrind doxygen graphviz cppcheck \
     protobuf-compiler libprotobuf-dev libpqxx-dev \
-    clang clang-tools clang-format clang-tidy \
+    clang-18 clang-tools-18 clang-format-18 clang-tidy-18 \
     && rm -rf /var/lib/apt/lists/*
 
-ENV version=3.26.0
+ENV version=3.28.0
 RUN cd /tmp && \
     mkdir /opt/cmake && \
     wget https://github.com/Kitware/CMake/releases/download/v$version/cmake-$version-Linux-x86_64.sh && \
