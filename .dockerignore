@@ -1,0 +1,9 @@
+mounted/
+.idea/
+.vscode/
+.vs/
+build/
+.git/
+
+home/
+examples/

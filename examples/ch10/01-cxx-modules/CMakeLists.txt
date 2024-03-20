@@ -21,8 +21,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD 20)
 
 add_library(math)
-target_sources(math
-  PUBLIC FILE_SET cxx_modules TYPE CXX_MODULES FILES math.cpp
-)
 add_executable(main main.cpp)
+target_sources(math
+  PUBLIC FILE_SET CXX_MODULES FILES math.cpp
+)
 target_link_libraries(main PRIVATE math)
