@@ -31,6 +31,8 @@ RUN cd /tmp && \
     cmake --install build-cmake && \
     rm -rf /tmp/ninja
 
+RUN chsh -s /bin/bash
+
 # Dev container stage
 FROM build-env as devcontainer
 RUN apt-get update && apt-get install -y openssh-server sudo && rm -rf /var/lib/apt/lists/*
