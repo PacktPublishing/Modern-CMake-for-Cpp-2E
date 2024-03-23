@@ -6,7 +6,7 @@ install(DIRECTORY data/ DESTINATION share/calc)
 include(GNUInstallDirs)
 install(DIRECTORY src/include/calc TYPE INCLUDE
   PATTERN "ignored" EXCLUDE
-  PATTERN "calc_extended.h" EXCLUDE
+  PATTERN "extended.h" EXCLUDE
 )
 
 install(DIRECTORY etc/ TYPE SYSCONF

@@ -1,6 +1,11 @@
-add_library(calc STATIC calc.cpp)
-target_include_directories(calc INTERFACE include)
-target_sources(calc PUBLIC FILE_SET HEADERS
-                           BASE_DIRS include
-                           FILES include/calc/calc.h
+add_library(calc STATIC basic.cpp)
+target_sources(calc
+  PUBLIC FILE_SET HEADERS BASE_DIRS include
+  FILES "include/calc/basic.h"
 )
+
+include(GNUInstallDirs)
+install(TARGETS calc 
+        ARCHIVE 
+        FILE_SET HEADERS 
+        )

@@ -1,6 +1,5 @@
-add_library(calc SHARED calc.cpp)
-target_include_directories(calc INTERFACE include)
+add_library(calc SHARED basic.cpp)
 target_sources(calc PUBLIC FILE_SET HEADERS
                            BASE_DIRS include
-                           FILES include/calc/calc.h
+                           FILES include/calc/basic.h
 )

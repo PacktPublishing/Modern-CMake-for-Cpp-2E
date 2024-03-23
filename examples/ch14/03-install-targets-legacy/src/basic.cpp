@@ -1,4 +1,4 @@
-#pragma once
+#include "calc/basic.h"
 
 int Add(int a, int b) {
   return a + b;

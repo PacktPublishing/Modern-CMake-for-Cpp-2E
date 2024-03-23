@@ -3,7 +3,7 @@ project(InstallFiles CXX)
 
 include(GNUInstallDirs)
 install(FILES
-              src/include/calc/calc.h
-              src/include/calc/nested/calc_extended.h
+              src/include/calc/basic.h
+              src/include/calc/nested/extended.h
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/calc
 )
