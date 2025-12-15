@@ -1,3 +1,5 @@
+<p align='center'><a href='https://www.packtpub.com/en-us/unlock?step=1'><img src='https://static.packt-cdn.com/assets/images/packt+events/finalGH_design_redeem.png'/></a></p>
+
 # Modern CMake for C++ 2nd Edition
 
 <a href="https://www.packtpub.com/product/modern-cmake-for-c/9781801070058"><img src="https://static.packt-cdn.com/products/9781801070058/cover/smaller" height="256px" align="right"></a>
